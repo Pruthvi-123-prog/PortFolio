@@ -77,17 +77,17 @@ const categories = [
 
 export default function SkillsSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 }) // Adjusted amount for better mobile visibility
 
   return (
-    <section id="skills" className="py-16 bg-background relative overflow-hidden">
+    <section id="skills" className="py-16 px-4 sm:px-8 md:px-16 lg:px-32 relative">
       {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/3 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-1/3 w-72 h-72 bg-accent/5 rounded-full blur-3xl z-0" />
+        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl z-0" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
+      <div className="container mx-auto relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,27 +108,24 @@ export default function SkillsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-8"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
         >
           {categories.map((category) => {
             const categorySkills = skills.filter((skill) => skill.category === category.name)
 
             return (
-              <div key={category.name}>
-                <h3 className="text-xl font-bold text-text mb-4 flex items-center gap-3">
-                  <div className="w-8 h-8 bg-surface-dark rounded-lg flex items-center justify-center">
-                    <category.icon className="w-4 h-4 text-accent" />
-                  </div>
-                  {category.name} Development
+              <div key={category.name} className="mb-8">
+                <h3 className="text-lg font-semibold text-center mb-4">
+                  {category.name}
                 </h3>
-
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {categorySkills.map((skill) => (
                     <motion.div
                       key={skill.name}
                       initial={{ opacity: 0, y: 20 }}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5 }}
+                      whileHover={{ scale: 1.1 }}
                       className="glass-effect p-4 rounded-xl text-center group hover:scale-105 transition-all duration-300"
                     >
                       <div className="flex justify-center mb-2">
