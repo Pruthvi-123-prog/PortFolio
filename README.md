@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pruthvi Suvarna K M - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Framer Motion, showcasing my journey as a Computer Science Engineering student and full-stack developer.
@@ -165,3 +166,6 @@ This project is open source and available under the [MIT License](LICENSE).
 **Currently pursuing B.E in Computer Science Engineering at Sri Devi Institute of Technology, Mangalore (CGPA: 8.65)**
 
 *Building secure, scalable, and impactful digital solutions.*
+=======
+# PortFolio
+>>>>>>> 8b9723d5e177b8a78fb08d104917b75a3baa5dc3
