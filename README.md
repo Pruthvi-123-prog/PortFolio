@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # Pruthvi Suvarna K M - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Framer Motion, showcasing my journey as a Computer Science Engineering student and full-stack developer.
 
-## 🚀 Features
+##  Features
 
 - **Modern Design**: Dark theme with glassmorphism effects inspired by contemporary web design
 - **Smooth Animations**: Powered by Framer Motion for engaging user interactions
@@ -12,7 +11,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Frame
 - **Accessibility First**: Semantic HTML and ARIA labels for screen readers
 - **SEO Optimized**: Meta tags and structured data for better search visibility
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
@@ -21,7 +20,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Frame
 - **Icons**: Lucide React
 - **Deployment**: Vercel (recommended)
 
-## 📱 Sections
+##  Sections
 
 1. **Hero Section**: Eye-catching introduction with animated background
 2. **About**: Personal information and academic background
@@ -30,7 +29,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Frame
 5. **Experience**: Academic journey and achievements timeline
 6. **Contact**: Interactive contact form and social links
 
-## 🎯 Key Projects Featured
+##  Key Projects Featured
 
 - **DIGANTHADEEPA Design.Build**: Next.js commercial website with advanced animations
 - **Crime Analysis System**: React.js application with interactive maps
@@ -39,14 +38,14 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Frame
 - **Face Track Attendance**: AI-powered facial recognition system
 - **Steganography App**: LSB technique for hiding messages in images
 
-## 🏆 Achievements
+##  Achievements
 
 - Winner - Code Breakers Challenge, YENIXA 2.0
 - Project Exhibition - I2CONECCT-2025
 - HackSummit 2025 Participant
 - IEEE Certified - REST API & DB Integration Workshop
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -71,9 +70,9 @@ npm install
 npm run dev
 ```
 
-### 📧 Email Configuration (Contact Form)
+###  Email Configuration (Contact Form)
 
-> **🔐 SECURITY NOTE**: Never use your regular email password! See `SECURITY_ALTERNATIVES.md` for secure options.
+> ** SECURITY NOTE**: Never use your regular email password! See `SECURITY_ALTERNATIVES.md` for secure options.
 
 The contact form uses server-side email sending with OTP verification. To enable this feature:
 
@@ -111,7 +110,7 @@ npm run build
 npm start
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -134,7 +133,7 @@ public/
 └── PRUTHVI SUVARNA RESUME.pdf
 ```
 
-## 🎨 Design Philosophy
+##  Design Philosophy
 
 This portfolio follows modern web design principles:
 
@@ -144,18 +143,18 @@ This portfolio follows modern web design principles:
 - **Mobile-First**: Responsive design that works on all devices
 - **Performance**: Optimized images and code splitting for fast loading
 
-## 📧 Contact
+##  Contact
 
 - **Email**: pruthvis2004@gmail.com
 - **LinkedIn**: [Pruthvi Suvarna K M](https://www.linkedin.com/in/pruthvi-suvarna-k-m)
 - **GitHub**: [Pruthvi-123-prog](https://github.com/Pruthvi-123-prog)
 - **Location**: Thirthahalli, Karnataka, India
 
-## 📄 License
+##  License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Inspired by modern portfolio designs and the DIGANTHADEEPA website
 - Built with the amazing Next.js and Framer Motion ecosystems
@@ -168,4 +167,3 @@ This project is open source and available under the [MIT License](LICENSE).
 *Building secure, scalable, and impactful digital solutions.*
 =======
 # PortFolio
->>>>>>> 8b9723d5e177b8a78fb08d104917b75a3baa5dc3
