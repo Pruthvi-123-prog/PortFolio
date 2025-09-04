@@ -113,5 +113,3 @@ setInterval(() => {
     }
   }
 }, 60000) // Clean up every minute
-
-export { otpStorage }

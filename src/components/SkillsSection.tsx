@@ -9,7 +9,6 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiHtml5,
-  SiCss3,
   SiNodedotjs,
   SiExpress,
   SiPython,
