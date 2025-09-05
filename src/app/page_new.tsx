@@ -14,27 +14,12 @@ import SmoothScrollProvider from '@/components/SmoothScrollProvider'
 
 export default function Home() {
   useEffect(() => {
-    // Set smooth scrolling behavior
-    document.documentElement.style.scrollBehavior = 'smooth';
-    
-    // Force sections to be visible
-    const forceVisibility = () => {
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => {
-        section.style.visibility = 'visible';
-        section.style.opacity = '1';
-      });
-    };
-    
-    // Call immediately and after a delay to handle any rendering issues
-    forceVisibility();
-    setTimeout(forceVisibility, 500);
-    setTimeout(forceVisibility, 1000);
+    document.documentElement.style.scrollBehavior = 'smooth'
   }, [])
 
   return (
     <SmoothScrollProvider>
-      <div className="relative min-h-screen w-full bg-background overflow-x-hidden">
+      <div className="relative min-h-screen w-full bg-background">
         {/* Navigation */}
         <div className="fixed top-0 left-0 right-0 z-50">
           <Navigation />
@@ -42,43 +27,43 @@ export default function Home() {
 
         {/* Main Content */}
         <motion.div
-          className="relative w-full pt-16 overflow-visible"
+          className="relative w-full pt-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
           {/* Hero Section */}
-          <section id="home" className="relative z-10 min-h-screen w-full">
+          <section id="home" className="relative z-10 min-h-screen">
             <HeroSection />
           </section>
           
           {/* About Section */}
-          <div id="about" className="relative z-20 min-h-screen w-full block opacity-100 visible">
+          <section id="about" className="relative z-10 min-h-screen">
             <AboutSection />
-          </div>
+          </section>
           
           {/* Skills Section */}
-          <div id="skills" className="relative z-20 min-h-screen w-full block opacity-100 visible">
+          <section id="skills" className="relative z-10 min-h-screen">
             <SkillsSection />
-          </div>
+          </section>
           
           {/* Projects Section */}
-          <div id="projects" className="relative z-20 min-h-screen w-full block opacity-100 visible">
+          <section id="projects" className="relative z-10 min-h-screen">
             <ProjectsSection />
-          </div>
+          </section>
           
           {/* Experience Section */}
-          <div id="experience" className="relative z-20 min-h-screen w-full block opacity-100 visible">
+          <section id="experience" className="relative z-10 min-h-screen">
             <ExperienceSection />
-          </div>
+          </section>
           
           {/* Contact Section */}
-          <section id="contact" className="relative z-20 min-h-screen w-full">
+          <section id="contact" className="relative z-10 min-h-screen">
             <ContactSection />
           </section>
           
           {/* Footer */}
-          <footer className="relative z-20">
+          <footer className="relative z-10">
             <Footer />
           </footer>
         </motion.div>

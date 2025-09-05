@@ -56,7 +56,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-background relative overflow-hidden">
+    <section id="about-section" className="py-20 bg-background relative overflow-visible w-full block">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />

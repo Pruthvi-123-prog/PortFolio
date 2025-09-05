@@ -8,9 +8,16 @@ interface SmoothScrollProviderProps {
 
 export default function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   useEffect(() => {
-    // We'll implement smooth scrolling later with CSS scroll-behavior: smooth
-    // For now, just return the children
+    // Add this to ensure scroll behavior works consistently
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Ensure sections are visible
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      section.style.visibility = 'visible';
+      section.style.display = 'block';
+    });
   }, [])
 
-  return <div>{children}</div>
+  return <>{children}</>
 }

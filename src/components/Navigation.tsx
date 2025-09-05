@@ -121,7 +121,16 @@ export default function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    // Add a short delay before scrolling to ensure the menu is closed
+                    setTimeout(() => {
+                      const element = document.querySelector(item.href);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
                   className="text-text-muted hover:text-accent block px-3 py-2 text-base font-medium transition-colors duration-200"
                 >
                   {item.name}

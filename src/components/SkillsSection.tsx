@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {
   SiReact,
@@ -80,20 +80,20 @@ export default function SkillsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.1 }) // Adjusted amount for better mobile visibility
 
   return (
-    <section id="skills" className="py-16 px-4 sm:px-8 md:px-16 lg:px-32 relative">
+    <section id="skills" className="py-6 px-2 sm:px-4 md:px-6 lg:px-8 w-full overflow-x-hidden relative">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-1/3 w-72 h-72 bg-accent/5 rounded-full blur-3xl z-0" />
         <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl z-0" />
       </div>
 
-      <div className="container mx-auto relative z-10" ref={ref}>
+      <div className="container max-w-full mx-auto px-2 sm:px-4 lg:px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient mb-4">
             Skills & Expertise
@@ -108,17 +108,17 @@ export default function SkillsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
           {categories.map((category) => {
-            const categorySkills = skills.filter((skill) => skill.category === category.name)
+            const categorySkills = skills.filter((skill) => skill.category === category.name);
 
             return (
-              <div key={category.name} className="mb-8">
+              <div key={category.name} className="mb-6">
                 <h3 className="text-lg font-semibold text-center mb-4">
                   {category.name}
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   {categorySkills.map((skill) => (
                     <motion.div
                       key={skill.name}
@@ -139,7 +139,7 @@ export default function SkillsSection() {
                   ))}
                 </div>
               </div>
-            )
+            );
           })}
         </motion.div>
       </div>
